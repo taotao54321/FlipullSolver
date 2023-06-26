@@ -23,10 +23,10 @@ $ cargo run --example=extract_advance -- Flipull.nes 0
 Give `path_problem` to `solve` executable.
 
 ```sh
-$ cargo run --example=solve -- problem.txt
-$ cargo run --example=solve -- --forbid-five problem.in  # forbid to erase 5 or above blocks at once
-$ cargo run --example=solve -- --forbid-just problem.in  # forbid "just clear"
-$ cargo run --example=solve -- --last-stage problem.in  # for the last stage
+$ cargo run --example=solve --release -- problem.txt
+$ cargo run --example=solve --release -- --forbid-five problem.txt  # forbid to erase 5 or above blocks at once
+$ cargo run --example=solve --release -- --forbid-just problem.txt  # forbid "just clear"
+$ cargo run --example=solve --release -- --last-stage problem.txt  # for the last stage
 ```
 
 ## Convert a solution to a NESHawk movie (you can paste it to TAStudio)
@@ -42,5 +42,5 @@ Give `(path_ines, stage, k)` to `solve_normal_multi` executable.
 You can specify various options. For details, use `--help` option.
 
 ```sh
-$ cargo run --example=solve_normal_multi -- --max-cost 1000 Flipull.nes 0 10
+$ cargo run --example=solve_normal_multi --release -- --max-cost 1000 Flipull.nes 0 10
 ```
